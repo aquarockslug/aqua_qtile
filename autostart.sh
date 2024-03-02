@@ -1,6 +1,6 @@
 #!/bin/sh
 /home/lava/.screenlayout/portrait_monitor.sh
-# /home/lava/bin/osx_minimal_wallpaper.sh
+~/aqua_arch/osx_minimal_wallpaper.sh
 
 picom &
 disown # --experimental-backends --vsync should prevent screen tearing on most setups if needed
