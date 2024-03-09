@@ -10,19 +10,26 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod],
+        "space",
+        lazy.layout.next(),
+        desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
-    Key(
-        [mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"
-    ),
+    Key([mod, "shift"],
+        "h",
+        lazy.layout.shuffle_left(),
+        desc="Move window to the left"),
     Key(
         [mod, "shift"],
         "l",
         lazy.layout.shuffle_right(),
         desc="Move window to the right",
     ),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
+    Key([mod, "shift"],
+        "j",
+        lazy.layout.shuffle_down(),
+        desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
@@ -39,8 +46,11 @@ keys = [
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
+    Key([mod],
+        "t",
+        lazy.window.toggle_floating(),
+        desc="Toggle floating on the focused window"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift", "control"], "h", lazy.layout.swap_column_left()),
@@ -74,13 +84,10 @@ keys = [
         lazy.spawn(f'{terminal} -e "mc /home/lava/Desktop/"'),
         desc="spawn mc",
     ),
-    Key(
-        [mod],
-        "t",
-        lazy.spawn(f"{terminal} -e taskwarrior-tui"),
-        desc="spawn taskwarrior",
-    ),
-    Key([mod], "m", lazy.spawn(f"{terminal} -e cmus"), desc="spawn cmus music player"),
+    Key([mod],
+        "m",
+        lazy.spawn(f"{terminal} -e cmus"),
+        desc="spawn cmus music player"),
     Key(
         [mod],
         "s",
